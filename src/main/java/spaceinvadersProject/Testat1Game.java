@@ -5,9 +5,8 @@ import javashooter.playground.Playground;
 import spaceinvadersProject.playground.ProjektLevel1;
 import spaceinvadersProject.playground.ProjektLevel2;
 import spaceinvadersProject.playground.ProjektLevel3;
-import spaceinvadersProject.playground.SpaceInvadersLevel;
 
-public class MyGame extends GameLoop {
+public class Testat1Game extends GameLoop {
 
     @Override
     public Playground nextLevel(Playground playground) {
@@ -28,7 +27,7 @@ public class MyGame extends GameLoop {
     }
 
     static void main(String[] args) {
-        new MyGame().runGame(args);
+        new Testat1Game().runGame(args);
 
         /*
         gibt "XXX" auf der Konsole aus, ist aber unnötig damit resourcen zu verschwenden
