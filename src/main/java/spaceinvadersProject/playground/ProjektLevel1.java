@@ -1,14 +1,11 @@
 package spaceinvadersProject.playground;
 
-public class Level1 extends SpaceInvadersLevel {
-    public Level1() {
-        super();
-    }
-
+public class ProjektLevel1 extends ProjectLevel {
     @Override
     public String getName() {
-        return "Level1";
+        return "level1";
     }
+
 
     @Override
     protected String getStartupMessage() {
