@@ -2,17 +2,17 @@ package spaceinvadersProject;
 
 import javashooter.gameutils.GameLoop;
 import javashooter.playground.Playground;
-import spaceinvadersProject.playground.Level1;
+import spaceinvadersProject.playground.SpaceInvadersLevel;
 
 public class MyGame extends GameLoop {
 
-    public MyGame() {
-        super();
-    }
-
     @Override
     public Playground nextLevel(Playground playground) {
-        return new Level1();
+        if (playground != null) {
+            return null;
+        }
+
+        return new SpaceInvadersLevel() {};
     }
 
     static void main(String[] args) {
