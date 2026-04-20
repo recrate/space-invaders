@@ -29,9 +29,14 @@ public class MyGame extends GameLoop {
 
     static void main(String[] args) {
         new MyGame().runGame(args);
+
+        /*
+        gibt "XXX" auf der Konsole aus, ist aber unnötig damit resourcen zu verschwenden
         Playground level1 = new ProjektLevel1();
         Playground level2 = new ProjektLevel2();
         Playground level3 = new ProjektLevel3();
+         */
+
 
     }
 }
