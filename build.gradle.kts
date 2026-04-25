@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("com.gradleup.shadow") version "8.3.6"
 }
 
 group = "spaceinvadersProject"
@@ -16,6 +17,15 @@ dependencies {
     implementation(fileTree("libs") {
         include("*.jar")
     })
+    implementation("io.github.classgraph:classgraph:4.8.184")
+}
+
+tasks.shadowJar {
+    archiveClassifier.set("")
+
+    manifest {
+        attributes["Main-Class"] = "spaceinvadersProject.MyGame"
+    }
 }
 
 tasks.test {
