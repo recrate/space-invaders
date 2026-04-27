@@ -24,16 +24,26 @@ public class ExperimentierLevel extends SpaceInvadersLevel {
     }
 
     @Override
-    public void applyGameLogic() {
-        RectObject redRect = new RectObject("redRect", new ExperimentierLevel(), 100, 100, 1000, 1000, 80, 10, Color.RED);
-        addObject(redRect);
-
-    }
-
-    @Override
     public void prepareLevel(String id) {
         localGameTime = getGameTime();
         super.prepareLevel(id);
+
+        ExperimentierLevel level = new ExperimentierLevel();
+
+        RectObject redRect = new RectObject("redRect", level, 100, 100, 10, 10, 80, 10, Color.RED);
+        addObject(redRect);
+
+        for(int i = 0; i < 100; i++) {
+            int speed = (int) (Math.random() * 60);
+            if(speed % 2 == 0) {
+                speed = speed / 2;
+            } else {
+                speed = (speed / 2) * (-1);
+            }
+
+            RectObject explosionRect = new RectObject("explosionRect" + i, level, 250, 250, speed, speed, 2, 2, Color.RED);
+            addObject(explosionRect);
+        }
     }
 
     @Override
