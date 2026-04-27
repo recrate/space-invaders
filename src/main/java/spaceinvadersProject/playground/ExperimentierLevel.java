@@ -32,7 +32,9 @@ public class ExperimentierLevel extends Playground {
 
     @Override
     public boolean levelFinished() {
+        if(getGameTime() >= 3.0) return true;
         return false;
+
     }
 
     @Override
