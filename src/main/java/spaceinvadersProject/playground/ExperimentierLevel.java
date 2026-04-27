@@ -1,5 +1,6 @@
 package spaceinvadersProject.playground;
 
+import javashooter.gameobjects.RectObject;
 import javashooter.playground.Playground;
 
 import java.awt.*;
@@ -23,6 +24,13 @@ public class ExperimentierLevel extends SpaceInvadersLevel {
     }
 
     @Override
+    public void applyGameLogic() {
+        RectObject redRect = new RectObject("redRect", new ExperimentierLevel(), 100, 100, 1000, 1000, 80, 10, Color.RED);
+        addObject(redRect);
+
+    }
+
+    @Override
     public void prepareLevel(String id) {
         localGameTime = getGameTime();
         super.prepareLevel(id);
@@ -32,7 +40,7 @@ public class ExperimentierLevel extends SpaceInvadersLevel {
     public double getTimestep() {
         if (this.gameTime >= (localGameTime + 3.0)) {
             System.out.println(this.gameTime);
-            doneLevel = true;
+            this.doneLevel = true;
         }
         return super.getTimestep();
     }
