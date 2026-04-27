@@ -4,7 +4,9 @@ import javashooter.playground.Playground;
 
 import java.awt.*;
 
-public class ExperimentierLevel extends Playground {
+public class ExperimentierLevel extends SpaceInvadersLevel {
+    double localGameTime = 0;
+
     @Override
     public String getName() {
         return "Test";
@@ -21,34 +23,17 @@ public class ExperimentierLevel extends Playground {
     }
 
     @Override
-    public void applyGameLogic() {
-
+    public void prepareLevel(String id) {
+        localGameTime = getGameTime();
+        super.prepareLevel(id);
     }
 
     @Override
-    public boolean gameOver() {
-        return false;
-    }
-
-    @Override
-    public boolean levelFinished() {
-        if(getGameTime() >= 3.0) return true;
-        return false;
-
-    }
-
-    @Override
-    public boolean resetRequested() {
-        return false;
-    }
-
-    @Override
-    public void redrawLevel(Graphics2D graphics2D) {
-
-    }
-
-    @Override
-    public void prepareLevel(String s) {
-        System.out.println("Hello World!");
+    public double getTimestep() {
+        if (this.gameTime >= (localGameTime + 3.0)) {
+            System.out.println(this.gameTime);
+            doneLevel = true;
+        }
+        return super.getTimestep();
     }
 }

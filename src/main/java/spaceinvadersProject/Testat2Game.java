@@ -8,6 +8,10 @@ public class Testat2Game extends GameLoop {
 
     @Override
     public Playground nextLevel(Playground playground) {
-        return new ExperimentierLevel();
+        if (playground == null) {
+            return new ExperimentierLevel();
+        }
+
+        return null;
     }
 }
