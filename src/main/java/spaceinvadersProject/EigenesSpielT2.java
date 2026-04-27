@@ -3,6 +3,7 @@ package spaceinvadersProject;
 public class EigenesSpielT2 {
 
     static void main(String[] args) {
-        System.out.println("Hallo");
+        Testat2Game game = new Testat2Game();
+        game.runGame(args);
     }
 }
