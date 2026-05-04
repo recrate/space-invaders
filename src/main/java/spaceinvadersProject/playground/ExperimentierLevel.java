@@ -26,10 +26,7 @@ public class ExperimentierLevel extends Playground {
     }
 
     @Override
-    public void applyGameLogic() {
-
-
-    }
+    public void applyGameLogic() {  }
 
     @Override
     public boolean gameOver() {
@@ -56,7 +53,7 @@ public class ExperimentierLevel extends Playground {
 
 
         RectObject redRect = new RectObject("redRect", this, 100, 100, 10, 10, 80, 10, Color.RED);
-        redRect.setOmega(3.60);
+        redRect.setOmega(2 * Math.PI);
         redRect.setController(kc);
         addObject(redRect);
 
@@ -79,7 +76,7 @@ public class ExperimentierLevel extends Playground {
                 System.out.println(speedy);
             }
 
-            RectObject explosionRect = new RectObject("explosionRect" + i, this, 250, 250, speedx, speedy, 2, 2, Color.RED);
+            RectObject explosionRect = new RectObject("explosionRect" + i, this, 250.0, 250.0, speedx, speedy, 2.0, 2.0, Color.RED);
             explosionRect.setPhi(3.0);
             addObject(explosionRect);
             explosionRect.setController(new KinematicsController());
