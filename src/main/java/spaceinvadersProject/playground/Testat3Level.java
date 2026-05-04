@@ -22,10 +22,11 @@ public class Testat3Level extends SpaceInvadersLevel{
         fly_enemy2.setController(new KinematicsController());
         addObject(fly_enemy2);
 
-        RectObject fly_enemy3 = new RectObject("fly_enemy3", this, 100.0, 200.0, 0.0, 20.0, 30.0, 30.0, Color.GREEN).generateColliders();
+        RectObject fly_enemy3 = new RectObject("fly_enemy3", this, 100.0, 200.0, 0.0, 20.0, 150.0, 150.0, Color.GREEN).generateColliders();
         fly_enemy3.setController(new KinematicsController());
 
-        FlashArtist fa = new FlashArtist(fly_enemy3, fly_enemy3.getW(), fly_enemy3.getH(), Color.BLUE);
+        Color[] colors = {Color.BLUE, Color.RED, Color.GREEN, Color.PINK, Color.CYAN, Color.MAGENTA, Color.YELLOW, Color.PINK};
+        FlashArtist fa = new FlashArtist(fly_enemy3, fly_enemy3.getW(), fly_enemy3.getH(), colors);
         fly_enemy3.addArtist(fa);
 
         addObject(fly_enemy3);
