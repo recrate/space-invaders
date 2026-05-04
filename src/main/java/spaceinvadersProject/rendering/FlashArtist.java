@@ -17,8 +17,6 @@ public class FlashArtist extends RectArtist {
         if((int) (gameObject.getGameTime() * 5) % 2 == 1) g2.setColor(Color.BLUE);
         else g2.setColor(Color.YELLOW);
 
-        System.out.println(gameObject.getGameTime());
-
         g2.fillRect((int)(-this.width / (double)2.0F), (int)(-this.height / (double)2.0F), (int)this.width, (int)this.height);
     }
 
