@@ -98,7 +98,8 @@ public class ExperimentierLevel extends Playground {
     */
 
     @Override
-    public void redrawLevel(Graphics2D graphics2D) {
-
+    public void redrawLevel(Graphics2D g2) {
+        g2.setColor(Color.BLACK);
+        g2.fillRect(0, 0, preferredSizeX(), preferredSizeY());
     }
 }
