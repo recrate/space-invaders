@@ -25,11 +25,10 @@ public class Testat3Level extends SpaceInvadersLevel{
         RectObject fly_enemy3 = new RectObject("fly_enemy3", this, 100.0, 200.0, 0.0, 20.0, 30.0, 30.0, Color.GREEN).generateColliders();
         fly_enemy3.setController(new KinematicsController());
 
-        fly_enemy3.addArtist(new FlashArtist(fly_enemy3, fly_enemy3.getW(), fly_enemy3.getH()));
+        FlashArtist fa = new FlashArtist(fly_enemy3, fly_enemy3.getW(), fly_enemy3.getH(), Color.BLUE);
+        fly_enemy3.addArtist(fa);
 
         addObject(fly_enemy3);
-
-
     }
 
     @Override
@@ -40,7 +39,7 @@ public class Testat3Level extends SpaceInvadersLevel{
 
     @Override
     public void actionIfEnemyIsHit(GameObject enemy, GameObject shot) {
-        if(enemy.getName().equals("fly_enemy1") || enemy.getName().equals("fly_enemy2")) return;
+        if(enemy.getName().equals("fly_enemy1") || enemy.getName().equals("fly_enemy2") || enemy.getName().equals("fly_enemy3")) return;
         super.actionIfEnemyIsHit(enemy, shot);
     }
 }
