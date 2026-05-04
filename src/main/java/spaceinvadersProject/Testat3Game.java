@@ -10,7 +10,7 @@ import java.lang.reflect.Modifier;
 import java.util.Comparator;
 import java.util.List;
 
-public class Testat1Game extends GameLoop {
+public class Testat3Game extends GameLoop {
 
     private int getLevelNumber(String name) {
         String number = name.replaceAll("\\D+", "");
@@ -58,7 +58,6 @@ public class Testat1Game extends GameLoop {
     }
 
     static void main(String[] args) {
-        System.out.println("Hallo");
-        new Testat1Game().runGame(args);
+        new Testat3Game().runGame(args);
     }
 }
